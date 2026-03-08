@@ -1,0 +1,9 @@
+experiment:
+  alpha: 0.05
+  power: 0.8
+
+metrics:
+  primary_metric: conversion_rate
+
+segments:
+  - country
