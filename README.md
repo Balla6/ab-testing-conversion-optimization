@@ -134,7 +134,6 @@ The experiment results support **rolling out the treatment experience globally**
 ---
 
 # Project Structure
-## Project Structure
 
 ```
 ab-testing-conversion-experiment
@@ -174,3 +173,4 @@ This project demonstrates practical data science and product analytics skills in
 - Data visualization
 
 - Analytical storytelling
+
