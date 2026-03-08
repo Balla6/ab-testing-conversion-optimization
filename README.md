@@ -134,6 +134,9 @@ The experiment results support **rolling out the treatment experience globally**
 ---
 
 # Project Structure
+## Project Structure
+
+```
 ab-testing-conversion-experiment
 │
 ├── config
@@ -156,8 +159,7 @@ ab-testing-conversion-experiment
 │
 ├── README.md
 └── requirements.txt
-
----
+```
 
 # Skills Demonstrated
 
@@ -170,4 +172,5 @@ This project demonstrates practical data science and product analytics skills in
 - Segment-level analytics
 - Business impact evaluation
 - Data visualization
+
 - Analytical storytelling
