@@ -2,51 +2,54 @@
 
 ## Executive Summary
 
-This project evaluates whether a new product experience improves user conversion rates using an A/B testing framework.
+In this project I analyze an A/B test to evaluate whether a new product experience improves user conversion rates.
 
-The treatment group achieved a **15.53%** conversion rate compared to **10.53%** for the control group, representing an **absolute uplift of 5.01 percentage points** and a **relative improvement of 47.6%**.
+The treatment group achieved a **15.53%** conversion rate compared to **10.53%** for the control group. This represents an **absolute increase of 5.01 percentage points** (about a **47.6% relative improvement**).
 
-A two-proportion Z-test confirms that the difference is **statistically significant**, and power analysis indicates that the experiment had sufficient sample size to detect the observed effect.
+A two-proportion Z-test shows that this difference is **statistically significant**, meaning the improvement is very unlikely to be caused by random variation. Power analysis also confirms that the experiment had more than enough data to detect the observed effect.
 
-The treatment also outperformed the control group across all geographic segments (**US, UK, Canada**), suggesting that the improvement is stable rather than isolated to a single region.
+The treatment outperformed the control across all geographic segments (**US, UK, and Canada**), which suggests the improvement is consistent rather than isolated to one region.
 
-Based on the observed uplift, deploying the treatment to a population of roughly **70,000 users** could generate approximately **3,500 additional conversions**.
+If this change were rolled out to roughly **70,000 users**, it could generate around **3,500 additional conversions**.
 
-**Recommendation:** Roll out the treatment experience globally.
-
----
-
-# Project Overview
-
-A product team introduced a new webpage experience intended to improve user conversions. The goal of this analysis is to determine whether the treatment version leads to a statistically significant improvement in conversion performance compared to the control version.
-
-Using A/B testing methodology, the project evaluates the experiment results, quantifies the treatment effect, and estimates the potential business impact of deploying the new experience.
+**Conclusion:** the experiment results support deploying the treatment version.
 
 ---
 
-# Why This Project Matters
+## Project Overview
 
-A/B testing is one of the most important tools in product analytics and experimentation. Product teams must determine not only whether a metric changed, but whether the change is **statistically reliable, practically meaningful, and consistent across user segments**.
+A product team introduced a redesigned webpage aimed at improving conversion rates. The goal of this analysis is to determine whether the new version actually improves performance compared to the existing experience.
 
-This project demonstrates a realistic experimentation workflow including:
+Using a standard A/B testing workflow, this project:
 
-- validating experiment data
-- estimating conversion uplift
-- testing statistical significance
-- quantifying uncertainty using confidence intervals
-- evaluating sample adequacy through power analysis
-- assessing performance across geographic segments
-- translating experiment results into business impact
+- compares conversion rates between control and treatment groups
+- evaluates statistical significance
+- estimates uncertainty using confidence intervals
+- checks whether the experiment had enough data to detect the effect
+- examines whether the results are consistent across different countries
+- translates the experiment results into potential business impact
 
 ---
 
-# Dataset
+## Why This Project Matters
 
-The dataset contains user-level experiment observations with the following fields:
+A/B testing is one of the core tools used by product and growth teams. In practice, teams don't just ask whether a metric changed — they want to know:
 
-- **country** — geographic segment of the user  
-- **group** — experiment assignment (control or treatment)  
-- **converted** — whether the user completed the conversion event (0 or 1)
+- Is the change statistically reliable?
+- Is the improvement meaningful from a business perspective?
+- Does the effect hold across different user segments?
+
+This project walks through that full workflow and demonstrates how experiment results can be turned into a data-driven product decision.
+
+---
+
+## Dataset
+
+The dataset contains user-level observations from the experiment with the following fields:
+
+- **country** – the user’s geographic region  
+- **group** – whether the user was assigned to the control or treatment experience  
+- **converted** – whether the user completed the conversion event (0 or 1)
 
 **Total observations:**  
 **69,889 users**
@@ -59,52 +62,48 @@ Country distribution:
 
 ---
 
-# Methodology
+## Methodology
 
-The experiment analysis follows a structured experimentation workflow.
+The experiment analysis follows a standard experimentation workflow.
 
-### 1. Data validation and quality checks
+### 1. Data validation
 
-- dataset structure verification  
-- missing value checks  
-- experiment group balance validation  
+Before running any analysis, the dataset is checked for:
+
+- correct structure and data types
+- missing values
+- balanced assignment between control and treatment groups
 
 ### 2. Conversion rate analysis
 
-- conversion rate for control vs treatment  
-- absolute and relative uplift estimation  
+Conversion rates are calculated for both groups and compared to estimate:
 
-### 3. Statistical hypothesis testing
+- absolute uplift
+- relative improvement
 
-- two-proportion Z-test  
-- significance evaluation  
+### 3. Hypothesis testing
 
-### 4. Confidence interval estimation
+A **two-proportion Z-test** is used to determine whether the observed difference between groups is statistically significant.
 
-- 95% confidence intervals for conversion rates  
-- uncertainty assessment  
+### 4. Confidence intervals
+
+95% confidence intervals are computed to quantify the uncertainty around the conversion estimates.
 
 ### 5. Power analysis
 
-- evaluation of sample size adequacy  
-- confirmation that the experiment had sufficient statistical power  
+Power analysis is performed to confirm that the experiment had a large enough sample size to detect the observed effect.
 
-### 6. Segment-level analysis
+### 6. Segment analysis
 
-- conversion performance by country  
-- evaluation of treatment consistency across geographic segments  
+Conversion performance is analyzed by country to evaluate whether the treatment effect is consistent across geographic segments.
 
 ### 7. Business impact estimation
 
-- projected additional conversions if the treatment is deployed  
-
-### 8. Product recommendation
-
-- experiment-based rollout decision  
+The observed uplift is translated into expected additional conversions if the treatment were deployed.
 
 ---
 
-# Key Results
+## Key Results
 
 | Metric | Control | Treatment |
 |------|------|------|
@@ -116,21 +115,21 @@ The experiment analysis follows a structured experimentation workflow.
 **Relative uplift:**  
 + **47.6% improvement**
 
-The difference between the groups is **highly statistically significant**, indicating that the observed improvement is unlikely to be due to random variation.
+The difference between groups is **statistically significant**, indicating that the improvement is unlikely to be due to random variation.
 
 ---
 
-# Business Impact
+## Business Impact
 
-If the treatment experience were deployed to approximately **70,000 users**, the expected impact would be:
+If the treatment experience were deployed to a population of about **70,000 users**, the expected outcome would be approximately:
 
 **≈ 3,500 additional conversions**
 
-The treatment effect is consistent across geographic segments, suggesting the improvement is not limited to a single region.
+Because the uplift appears across all geographic segments, the improvement is likely to generalize beyond a single region.
 
 ---
 
-# Visualizations
+## Visualizations
 
 ### Conversion Rate Comparison
 
@@ -146,22 +145,22 @@ The treatment effect is consistent across geographic segments, suggesting the im
 
 ---
 
-# Recommendation
+## Recommendation
 
-Based on the statistical evidence and observed business impact, the treatment version demonstrates a substantial improvement in conversion performance.
+Based on the statistical results and the estimated business impact, the treatment version clearly improves conversion performance.
 
-The experiment results support **rolling out the treatment experience globally**, as it produces a meaningful and statistically significant increase in conversions.
+The analysis supports **rolling out the treatment experience globally**.
 
 ---
 
-# Technologies Used
+## Technologies Used
 
-- Python  
-- Pandas  
-- NumPy  
-- Matplotlib  
-- Statsmodels  
-- Jupyter Notebook  
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Statsmodels
+- Jupyter Notebook
 
 ---
 
@@ -194,14 +193,13 @@ ab-testing-conversion-experiment
 
 ---
 
-# Reproducibility
+## Reproducibility
 
 To run this project locally:
 
 1. Clone the repository
-2. Install dependencies from `requirements.txt`
-3. Open `notebooks/experiment_analysis.ipynb`
-4. Run the notebook from top to bottom
+2. Install the dependencies
+3. Open the notebook and run the analysis
 
 Example setup:
 
@@ -210,17 +208,21 @@ git clone https://github.com/Balla6/ab-testing-conversion-optimization.git
 cd ab-testing-conversion-optimization
 pip install -r requirements.txt
 ```
-Reusable statistical functions are implemented in:
-- src/stats_tests.py
-- src/experiment_utils.py
 
-# Skills Demonstrated
+Reusable statistical functions used in the analysis are located in:
 
-- A/B experimentation design
+- `src/stats_tests.py`
+- `src/experiment_utils.py`
+
+---
+
+## Skills Demonstrated
+
+- A/B experimentation
 - Statistical hypothesis testing
 - Confidence interval estimation
 - Statistical power analysis
-- Segment-level analytics
-- Business impact evaluation
+- Segment-level analysis
+- Business impact estimation
 - Data visualization
 - Analytical storytelling
