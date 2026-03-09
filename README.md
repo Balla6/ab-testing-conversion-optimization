@@ -171,6 +171,56 @@ This project demonstrates practical data science and product analytics skills in
 - Segment-level analytics
 - Business impact evaluation
 - Data visualization
-
 - Analytical storytelling
+
+## Executive Summary
+
+This project evaluates whether a new product experience improves conversion rates using an A/B test framework.
+
+The treatment group achieved a **15.53%** conversion rate versus **10.53%** for the control group, representing an **absolute uplift of 5.01 percentage points** and a **relative improvement of 47.6%**.
+
+A two-proportion Z-test showed that the difference is **highly statistically significant**, and power analysis confirmed that the experiment had more than enough sample size to detect the observed effect reliably.
+
+The treatment also outperformed the control group across all three geographic segments in the dataset (**US, UK, and Canada**), suggesting that the effect is stable rather than isolated to a single market.
+
+Based on the observed uplift, the experiment suggests the treatment could generate roughly **3,500 additional conversions per 70,000 users** if rolled out.
+
+**Recommendation:** Roll out the treatment experience globally.
+
+## Why This Project Matters
+
+A/B testing is one of the most important tools in product analytics and experimentation. In practice, product teams do not just ask whether a metric changed — they ask whether the change is statistically reliable, practically meaningful, and consistent across user segments.
+
+This project demonstrates that workflow end to end:
+
+- validating experiment data
+- comparing treatment vs control conversion
+- testing statistical significance
+- quantifying uncertainty with confidence intervals
+- checking sample adequacy with power analysis
+- evaluating consistency across segments
+- translating uplift into business impact
+
+The result is a more realistic experimentation case study than a simple “p-value only” analysis.
+
+## Reproducibility
+
+To run this project locally:
+
+1. Clone the repository
+2. Install dependencies from `requirements.txt`
+3. Open `notebooks/experiment_analysis.ipynb`
+4. Run the notebook from top to bottom
+
+Example setup:
+
+```bash
+git clone https://github.com/Balla6/ab-testing-conversion-optimization.git
+cd ab-testing-conversion-optimization
+pip install -r requirements.txt
+```
+
+The reusable statistical functions used in the notebook are stored in:
+- src/stats_tests.py
+- src/experiment_utils.py
 
